@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 declare let alertify: any;
+alertify.set('notifier', 'position', 'top-center');
+alertify.set('notifier', 'delay', 2);
 
 @Injectable({
   providedIn: 'root'
@@ -21,14 +23,17 @@ export class AlertifyService {
   }
 
   error(message: string) {
+
     alertify.error(message);
   }
 
   warning(message: string) {
+
     alertify.warning(message);
   }
 
   message(message: string) {
+
     alertify.message(message);
   }
 }
